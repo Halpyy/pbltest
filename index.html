@@ -536,7 +536,28 @@ nav a{padding:14px 11px;font-size:10px;}
 <p>For the AI-assisted review analysis, we sampled 100 reviews at a time to prevent errors occurring from a data overload. However, the analysis itself was done at once and the 100 samples were saved separately, allowing for a total overview and not just a sample overview.</p>
 <p>Because our end goal is proposing content for our streaming platform, we analyzed the main positive and negative points for each genre/show and used them to pinpoint what we need to do and what to avoid when making a show for each genre.</p>
 <img src="analysis-example.png" style="max-width: 100%; height: auto;" alt="Analysis Example" />
-<p><i>An example of a analysis given by AI</i></p>
+<p><i>An example of an analysis given by AI</i></p>
+</div>
+
+<div class="card">
+<p>We double-checked the analyzed data using AI as a fact checking tool, and all findings came up with a score of 90 or above, meaning it is an accurate representation of the data provided. The prompt we used is as follows:</p>
+<div class="prompt-box">당신은 엄격하고 객관적인 'AI 팩트체커(Fact-Checker)'입니다.
+다른 AI가 이전 데이터를 바탕으로 작성한 [1차 요약 결과]가 주어집니다.
+당신의 임무는 아래에 제공된 [검증용 리뷰 샘플 {verify_sample_size}개]를 읽고, 1차 요약 결과가 이 샘플에서도 똑같이 타당한지(과장되거나 거짓된 내용은 없는지) 검증하는 것입니다.
+
+[1차 요약 결과]
+- 긍정적 피드백: {summary_data.get('positive_feedback', [])}
+- 부정적 피드백: {summary_data.get('negative_feedback', [])}
+- 반복되는 주제: {summary_data.get('recurring_themes', [])}
+
+[요구사항]
+**주의사항: 모든 응답은 반드시 '한국어(Korean)'로 작성해 주세요.**
+1. 1차 요약 결과의 각 항목들이 검증용 리뷰 샘플에서도 실제로 나타나는지 꼼꼼히 검증하세요.
+2. 타당하다면 true, 증거가 부족하거나 과장되었다면 false로 표기하고 그 이유와 실제 리뷰의 예시를 인용하여 적어주세요.
+3. 1차 요약의 전체적인 객관성과 신뢰도를 0점에서 100점 사이로 평가하세요.
+4. 마지막으로 검증 결과에 대한 총평을 작성하세요.</div>
+  <img src="check-example.png" style="max-width: 100%; height: auto;" alt="Fact Check Example" />
+</p><i>An example of a double check done of an analysis by AI</i></p>
 </div>
 </section>
 
@@ -708,7 +729,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <div class="proposal-body">
 <div class="meta-list">
 <span>Genre: Emotional Relationship</span>
-<span>Target: Women in their 10s, 20s, and 40s</span>
+<span>Target: Viewers who enjoy a heartful and dramatic portrayal of human emotions and relationships.</span>
 <span>Format: 6-Part Netflix Series</span>
 </div>
 <p>StreamKUS proposes "When the Seasons Stay" as its first original emotional romance and family healing drama series. The story follows people who reconnect with love, family, and forgotten relationships while navigating the emotional changes of adulthood.</p>
@@ -726,7 +747,11 @@ nav a{padding:14px 11px;font-size:10px;}
 <li><strong>Ep.6: When The Seasons Stay</strong> (우리의 계절은 아직) — Accepting love, family, and moving forward</li>
 </ol>
 <div class="reason-box">
-<p><strong>Reasons based on collected data:</strong> Text-mining analysis revealed that viewers strongly respond to the emotional humanism that is characteristic of Korean romance dramas. Audience reactions frequently included keywords such as cried, love, family, and touching, indicating that viewers value emotionally sincere stories about relationships, family bonds, healing, and meaningful human connections.</p>
+<p><strong>Reasons based on collected data:</strong>  This proposal is directly connected to the romance analysis in three ways.
+<br><b>First</b>, Single’s Inferno and When Life Gives You Tangerines were not treated as identical types of romance content. Single’s Inferno was used as a reference for romance reality content, where viewer reactions were strongly centered on cast members, individual personalities, relationship dynamics, and visible chemistry. Since many frequent keywords from Single’s Inferno were cast member names, we did not interpret this simply as proof of “good cast.” Instead, we interpreted it as evidence that memorable individuals and relationship tension are important in romance reality content. This finding was reflected in When The Seasons Stay by designing a small central cast with clear personalities, strong chemistry, and unresolved emotional tension.
+<br><b>Second</b>, because When The Seasons Stay is a scripted romance drama, When Life Gives You Tangerines was used as the main reference for the proposal. Text-mining analysis showed that viewers responded strongly to emotional humanism, family relationships, healing, and sincere storytelling. Audience reactions frequently included keywords such as cried, love, family, and touching. Therefore, When The Seasons Stay focuses on family-centered storytelling, emotional wounds, reconciliation, and healing relationships rather than only confession, breakup, or romantic excitement.
+<br><b>Third</b>, the negative feedback in the romance data included unnecessary long scenes, weak plot structure, and poor pacing or editing in reality-style content. To avoid these problems, the series is designed as a six-episode format, with each episode centered on one clear emotional conflict and one stage of relationship development. This structure is intended to reduce filler scenes and make the emotional progression easier to follow.
+</p>
 </div>
 </div>
 </details>
@@ -743,6 +768,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <div class="proposal-body">
 <div class="meta-list">
 <span>Genre: Human/Social Issues</span>
+<span>Target: Viewers who enjoy realistic human stories, social issues, emotional sincerity, and medical teamwork.</span>
 <span>Format: 6-Part Netflix Series with Short-Form Content</span>
 </div>
 <p>The Second Golden Time is a human and social documentary drama that focuses on what happens after a patient survives an emergency. Each episode begins with an urgent medical case, such as a traffic accident, workplace injury, or emergency room crisis. However, instead of ending with a successful surgery, the story follows the patient's second crisis after survival: medical bills, lack of caregivers, trauma, unemployment, family conflict, and social isolation.</p>
@@ -757,7 +783,11 @@ nav a{padding:14px 11px;font-size:10px;}
 <li><strong>Ep.6: 72 Hours After Discharge</strong> — Following a patient for 72 hours after discharge and showing how healthcare and community support should be connected</li>
 </ol>
 <div class="reason-box">
-<p><strong>Reasons based on collected data:</strong> This proposal is based on our finding that viewers of The Trauma Code responded positively to fast pacing, charismatic characters, team chemistry, cathartic moments, and criticism of the medical system. Keywords such as fast-paced, characters, satisfying, medical system, and teamwork appeared repeatedly. However, viewers also criticized exaggerated scenes, unrealistic hero-like protagonists, and predictable medical drama clichés. Therefore, The Second Golden Time keeps the strengths of The Trauma Code, such as tension, teamwork, and social criticism, but avoids excessive hero fantasy by focusing on more realistic problems after emergency treatment.</p>
+<p><strong>Reasons based on collected data:</strong> This proposal is directly connected to the human/social issue content analysis in three ways.
+<br><b>First</b>, the analysis of The Trauma Code showed that viewers responded positively to fast pacing, urgent situations, charismatic characters, team chemistry, cathartic moments, and criticism of the medical system. Therefore, The Second Golden Time keeps the tension of emergency medical situations and the teamwork between professionals, but expands the story beyond the hospital scene.
+<br><b>Second</b>, the analysis showed that viewers also valued meaningful messages, emotional sincerity, and realistic human stories in human-centered content. Because of this, the proposal focuses not only on the moment when a patient survives, but also on what happens after survival, such as medical bills, lack of caregivers, trauma, unemployment, family conflict, and social isolation. This reflects the finding that viewers respond well when human and social dramas combine emotional storytelling with a clear social message.
+<br><b>Third</b>, the negative feedback in this category included unrealistic scenes, exaggerated hero-like characters, predictable drama clichés, and repetitive structure. To avoid these problems, The Second Golden Time does not center only on one perfect heroic doctor. Instead, each episode follows a different patient and social problem after emergency treatment. This structure is intended to make the story more realistic, reduce repetition, and connect medical tension with broader social issues.
+</p>
 </div>
 </div>
 </details>
@@ -774,7 +804,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <div class="proposal-body">
 <div class="meta-list">
 <span>Genre: Suspense/Survival</span>
-<span>Target: Men in their 10s, 20s, 40s, 50s and above</span>
+<span>Target: Viewers who enjoy suspense, survival games, psychological tension, moral conflict, and high-immersion thrillers.</span>
 <span>Format: 6-Part Netflix Series</span>
 </div>
 <p>StreamKUS proposes "Dead Chamber" as its first original psychological survival thriller series. The story follows six strangers who are invited to participate in a mysterious roulette game where each spin determines life or death.</p>
@@ -791,7 +821,11 @@ nav a{padding:14px 11px;font-size:10px;}
 <li><strong>Ep.6: Dead Chamber</strong> (죽음의 룰렛) — The truth behind the game is uncovered</li>
 </ol>
 <div class="reason-box">
-<p><strong>Reasons based on collected data:</strong> According to recent popularity rankings on Netflix, survival thrillers have consistently attracted strong audience attention, as shown by the global success of series such as Squid Game and Parasyte: The Grey. Text-mining analysis of viewer reviews on Watcha and Rotten Tomatoes also revealed that keywords such as immersion, visual excitement, video quality, and CG appeared frequently in thriller-related discussions. These findings suggest that audiences strongly value visually engaging experiences, cinematic tension, and high-quality production elements within the thriller genre.</p>
+<p><strong>Reasons based on collected data:</strong> This proposal is directly connected to the thriller analysis in three ways.
+<br><b>First</b>, the analysis of thriller content showed that viewers responded positively to suspense, immersion, creative storylines, strong acting, visual quality, and CG-based production. Therefore, Dead Chamber is designed as a psychological survival thriller with a strong visual concept, a closed game space, intense sound design, and cinematic tension built around a deadly roulette game.
+<br><b>Second</b>, the data showed that viewers enjoy thriller content when it creates uncertainty, moral conflict, and discussion after watching. Because of this, Dead Chamber is not designed as a simple action-based survival game. Instead, the roulette system forces characters to make choices involving trust, betrayal, guilt, and survival. This reflects the finding that audiences value thrillers that combine visual excitement with psychological pressure.
+<br><b>Third</b>, the negative feedback in thriller data included weak logic, underwhelming endings, and too much similarity to previous survival shows. To avoid these problems, Dead Chamber is structured around hidden rules and gradual revelations, so that each episode explains more about the system behind the game. The final episode is designed to resolve the central mystery rather than only deliver shock. Also, instead of copying a general survival-game format, the roulette mechanism emphasizes randomness, fate, and moral responsibility, giving the proposal a clearer difference from existing works.
+</p>
 </div>
 </div>
 </details>
@@ -808,7 +842,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <div class="proposal-body">
 <div class="meta-list">
 <span>Genre: Comedy/Relatable</span>
-<span>Target: 20s and 30s with high media usage</span>
+<span>Target: Viewers who enjoy relatable everyday comedy, relationship humor, satire, and short-form content.</span>
 <span>Format: YouTube Upload with Netflix Expansion Potential</span>
 </div>
 <p>This show follows a couple who have gotten married after seven years of dating, but run into realistic fights and laughs as newlyweds.</p>
@@ -824,7 +858,11 @@ nav a{padding:14px 11px;font-size:10px;}
 <li><strong>Ep.6: You've Got Company</strong> (회사 사람 앞 내 배우자) — Social life after marriage</li>
 </ol>
 <div class="reason-box">
-<p><strong>Reasons based on collected data:</strong> After analyzing YouTube comments and social media posts about Shortbox, we concluded that viewers reacted better to comedy when it is based on relatable aspects of life. There were also many requests for an expansion on this series, along with mentions of keywords such as newlywed, military service, work, and marriage. This was the reason behind the format allowing for expansion. If the series expands, viewer comments can be used to decide the topic of future episodes, helping the show avoid repetition and better match viewer wants and needs. Since some comments reacted negatively with words such as boring, repetitive, and stop, we chose life after marriage as a relatively less common topic.</p>
+<p><strong>Reasons based on collected data:</strong> This proposal is directly connected to the comedy analysis in three ways.
+<br><b>First</b>, the analysis of Shortbox and SNL showed that viewers responded positively to relatable everyday situations, relationship-based humor, easy-to-understand comedy, character-driven jokes, and social satire. Therefore, We’re Not Done Yet focuses on realistic conflicts that many viewers can recognize, such as dating after marriage, housewarming, in-law communication, money management, repeated past stories, and social life after marriage.
+<br><b>Second</b>, the Shortbox data included repeated keywords and comments related to future content expansion, such as newlywed, marriage, military service, work, series, next episode, and make more. Because of this, the proposal uses a YouTube-first format with Netflix expansion potential. The first season focuses on life after marriage, but the format can expand into future episodes based on viewer comments and repeated audience requests.
+<br><b>Third</b>, the negative feedback in the comedy data included boring, repetitive, forced, exaggerated, uncomfortable, and too political. To avoid these problems, We’re Not Done Yet does not depend on extreme situations or one-time jokes. Instead, each episode is based on a specific everyday conflict and character relationship. The topic of life after marriage was chosen because it extends relationship comedy beyond the more common dating, breakup, and confession stages, reducing the risk of repeating familiar short-form romance comedy patterns.
+</p>
 </div>
 </div>
 </details>
