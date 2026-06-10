@@ -474,7 +474,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <div class="team-chip">김동혁</div>
 <div class="team-chip">권혜인</div>
 <div class="team-chip">전보윤</div>
-<a class="repo-link" href="https://github.com/pbl1852/analysis-team" target="_blank">GitHub Repository</a>
+<a class="repo-link" href="https://github.com/Halpyy/pblstreamkus" target="_blank">GitHub Repository</a>
 </div>
 </section>
 
@@ -515,7 +515,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <p><strong>Dramas:</strong> We used the most watched Netflix shows from 2024-25 from each genre: 1 emotional relationship show, 1 human/social issue show, and 3 suspense/survival shows. For Korean reviews, we used Watchapedia (pedia.watcha.com), and for English reviews, we used Rotten Tomatoes (rottentomatoes.com). For each show, we used Codex to collect all user reviews available without post filtering, and piled them into a CSV file.</p>
 <p>For dramas, we used audience reviews, not critic reviews, as we thought that the overall reviews of a wider audience would be more fit for our needs than the more professional critic reviews. The same thought process went into collecting reality show reviews, as we thought YouTube comments as well as social media posts would be able to represent a wider audience, therefore leading to a better understanding of what the wider audience yearns.</p>
 <p><strong>Reality:</strong> We used 1 emotional relationship show, 1 human/social issue show, and 2 comedy/relatable short-form content reality shows that gained traction in recent years, aired on Netflix, TV(EBS), YouTube, and Coupang Play respectively. We collected YouTube comments and posts on social media sites Nate (nate.com) and DCInside (dcinside.com), and piled them into a CSV file using Codex for analysis.</p>
-<a href="https://drive.google.com/drive/folders/1IzeLTNBBaDALwh3zGL6ZNJ30jEwQUzxR?usp=drive_link" target="_blank">Folder with all the CSV files with comments</a>
+<a href="https://drive.google.com/drive/folders/1IzeLTNBBaDALwh3zGL6ZNJ30jEwQUzxR?usp=drive_link" target="_blank">Folder with all the CSV files containing comments</a>
 </div>
 
 <img src="data-source-rationale.png" alt="Data Source Rationale" style="width:100%;display:block;margin-top:24px;border-radius:var(--radius-sm);" />
@@ -536,7 +536,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <div class="prompt-box">"당신은 영화/TV 평론가이자 데이터 분석가입니다.전체 리뷰 중 {sample_size}개를 무작위로 추출한 데이터를 바탕으로 종합적인 리뷰 분석을 작성해 주세요.요구사항:**주의사항: 모든 분석 결과와 응답값은 반드시 '한국어(Korean)'로 작성해 주세요.**. 이 작품에 대한 사람들의 반응과 점수 분석 근거를 한국어로 명확하게 작성하세요. 긍정적 피드백, 부정적 피드백, 반복되는 주제를 배열 형태로 매우 상세하게 요약하세요. **중요**: 각 항목은 반드시 '**주제:** 설명' 형식으로 작성하세요. (예시: '**세계관의 확장:** 단순히 게임을 반복하는 것이 아니라...'). 샘플링된 리뷰들에서 가장 많이 언급된 핵심 키워드 상위 10개를 추출하고, 해당 키워드가 샘플 리뷰 내에서 대략 몇 번 언급되었는지 빈도수를 추정하여 포함하세요. 결론을 한국어로 작성하세요."</div>
 <p>For the AI-assisted review analysis, we sampled 100 reviews at a time to prevent errors occurring from a data overload. However, the analysis itself was done at once and the 100 samples were saved separately, allowing for a total overview and not just a sample overview.</p>
 <p>Because our end goal is proposing content for our streaming platform, we analyzed the main positive and negative points for each genre/show and used them to pinpoint what we need to do and what to avoid when making a show for each genre.</p>
-<a href="https://docs.google.com/spreadsheets/d/1P93pi1ir2HVLLKURNG_AwNTL0Bfn_ltB-zj2Kj7W5tk/edit?gid=1163432579#gid=1163432579" target="_blank">Link to all analysis compiled</a>
+<a href="https://docs.google.com/spreadsheets/d/1P93pi1ir2HVLLKURNG_AwNTL0Bfn_ltB-zj2Kj7W5tk/edit?gid=1163432579#gid=1163432579" target="_blank">Link to all analyses compiled</a>
 <img src="analysis-example.png" style="max-width: 100%; height: auto;" alt="Analysis Example" />
 <p><i>An example of an analysis given by AI</i></p>
 </div>
@@ -608,7 +608,7 @@ nav a{padding:14px 11px;font-size:10px;}
     <div class="gs-icon">🎭</div>
     <div class="gs-meta">
       <div class="gs-title">Human/Social Issue Content</div>
-      <div class="gs-target">Men 20s, 30s, 50+ / Women 40s</div>
+      <div class="gs-target">Men in their 20s, 30s, 50+ / Women in their 40s</div>
     </div>
     <div class="gs-rules">
       <div class="gs-rules-col">
@@ -682,7 +682,7 @@ nav a{padding:14px 11px;font-size:10px;}
     <div class="gs-icon">😄</div>
     <div class="gs-meta">
       <div class="gs-title">Comedy/Relatable Short-Form Content</div>
-      <div class="gs-target">Men 40s, 50+ / Women 40s</div>
+      <div class="gs-target">Men in their 40s, 50+ / Women in their 40s</div>
     </div>
     <div class="gs-rules">
       <div class="gs-rules-col">
@@ -845,7 +845,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <div class="meta-list">
 <span>Genre: Comedy/Relatable</span>
 <span>Target: Viewers who enjoy relatable everyday comedy, relationship humor, satire, and short-form content</span>
-<span>Format: YouTube Upload with Netflix Expansion Potential</span>
+<span>Format: YouTube Series with Netflix Expansion Potential</span>
 </div>
 <p>This show follows a couple who have gotten married after seven years of dating, but run into realistic fights and laughs as newlyweds.</p>
 <p>Unlike existing shows which focus on the talking, dating, breakup, and marriage stage, this show focuses on life after marriage. It wants to show that marriage is not a happy ending but a start of something new, as the couple run into unexpected situations after becoming husband and wife.</p>
@@ -877,7 +877,7 @@ nav a{padding:14px 11px;font-size:10px;}
 <h2>Research Constraints</h2>
 <div class="limit-item"><div class="limit-icon">⚠️</div><div><h3>Limited Data Scope</h3><p>The data came mainly from publicly available reviews, YouTube comments, and online community posts. These comments do not represent all viewers because people who post online are usually more active, emotional, or opinionated than silent viewers, however we came to the conclusion that even with these limitations, this was the best method to gather insights.</p></div></div>
 <div class="limit-item"><div class="limit-icon">⚠️</div><div><h3>Platform Differences</h3><p>The amount and type of data differed depending on the content and platform. Some works had many YouTube comments, while others had more review-site data or community discussions, which made direct comparison difficult. In addition, users on different platforms may express their opinions in different ways, which could have influenced the results. Future research could reduce this limitation by collecting a more balanced amount of data across platforms and content types to improve the comparability of the datasets.</p></div></div>
-<div class="limit-item"><div class="limit-icon">⚠️</div><div><h3>Text Mining Limits</h3><p>Slang, memes, sarcasm, abbreviations, swear words, and community-specific expressions are difficult for AI tools to understand accurately. Because of this, some audience reactions may have been misclassified or not fully reflected in the analysis. While no formal validation procedure was conducted, the results were interpreted in relation to the original comments to ensure general consistency.</p></div></div>
+<div class="limit-item"><div class="limit-icon">⚠️</div><div><h3>Text Mining Limits</h3><p>Slang, memes, sarcasm, abbreviations, swear words, and community-specific expressions are difficult for AI tools to understand accurately. Because of this, some audience reactions may have been misclassified or not fully reflected in the analysis. As such, the results were interpreted in relation to the original comments to ensure general consistency.</p></div></div>
 </section>
 
 <section id="conclusion">
@@ -887,7 +887,7 @@ nav a{padding:14px 11px;font-size:10px;}
 
   <div class="conclusion-main card conclusion-main-card">
     <div class="concl-main-title">Main Takeaway</div>
-    <p>This project aimed to help StreamKUS plan its first original content through a data-driven approach rather than relying only on intuition. By analyzing audience reviews, YouTube comments, and online community discussions across romance, thriller, slice of life, and comedy, we identified several patterns in what viewers respond to most strongly.</p>
+    <p>This project aimed to help StreamKUS plan its first original content through a data-driven approach rather than relying only on intuition. By analyzing audience reviews, YouTube comments, and online community discussions across emotional relationship, suspense/survival, human/social issue, and comedy/relatable content, we identified several patterns in what viewers respond to most strongly.</p>
     <div class="concl-genre-grid">
       <div class="concl-genre-chip romance-chip">
         <span class="concl-chip-label">Emotional Relationship Content</span>
@@ -934,16 +934,17 @@ nav a{padding:14px 11px;font-size:10px;}
 <p class="section-label">08 · References</p>
 <h2>Sources &amp; Citations</h2>
 <div class="card">
-<div class="ref-item"><span class="ref-num">[1]</span><span><a href="https://flixpatrol.com/" target="_blank" rel="noopener noreferrer">https://flixpatrol.com/</a></span></div>
-<div class="ref-item"><span class="ref-num">[2]</span><span><a href="https://www.banronbodo.com/news/articleView.html?idxno=30518" target="_blank" rel="noopener noreferrer">https://www.banronbodo.com/news/articleView.html?idxno=30518</a></span></div>
-<div class="ref-item"><span class="ref-num">[3]</span><span><a href="https://www.banronbodo.com/news/articleView.html?idxno=30515" target="_blank" rel="noopener noreferrer">https://www.banronbodo.com/news/articleView.html?idxno=30515</a></span></div>
-<div class="ref-item"><span class="ref-num">[4]</span><span><a href="https://pedia.watcha.com/ko" target="_blank" rel="noopener noreferrer">https://pedia.watcha.com/ko</a></span></div>
-<div class="ref-item"><span class="ref-num">[5]</span><span><a href="https://www.rottentomatoes.com/" target="_blank" rel="noopener noreferrer">https://www.rottentomatoes.com/</a></span></div>
-<div class="ref-item"><span class="ref-num">[6]</span><span><a href="https://colab.research.google.com/drive/116H4h0TPEySDIFW5DBKDdVyW8DWdSu9W" target="_blank" rel="noopener noreferrer">https://colab.research.google.com/drive/116H4h0TPEySDIFW5DBKDdVyW8DWdSu9W</a></span></div>
-<div class="ref-item"><span class="ref-num">[7]</span><span><a href="https://theqoo.net/square/2487689967" target="_blank" rel="noopener noreferrer">https://theqoo.net/square/2487689967</a></span></div>
-<div class="ref-item"><span class="ref-num">[8]</span><span><a href="https://gall.dcinside.com/board/view/?id=dcbest&amp;no=414021" target="_blank" rel="noopener noreferrer">https://gall.dcinside.com/board/view/?id=dcbest&amp;no=414021</a></span></div>
-<div class="ref-item"><span class="ref-num">[9]</span><span><a href="https://www.fmkorea.com/9667456984" target="_blank" rel="noopener noreferrer">https://www.fmkorea.com/9667456984</a></span></div>
-<div class="ref-item"><span class="ref-num">[10]</span><span><a href="https://docs.google.com/spreadsheets/d/1P93pi1ir2HVLLKURNG_AwNTL0Bfn_ltB-zj2Kj7W5tk/edit" target="_blank" rel="noopener noreferrer">https://docs.google.com/spreadsheets/d/1P93pi1ir2HVLLKURNG_AwNTL0Bfn_ltB-zj2Kj7W5tk/edit</a></span></div>
+<div class="ref-item"><span class="ref-num">[1]</span><span><a href="https://flixpatrol.com/" target="_blank" rel="noopener noreferrer">https://flixpatrol.com/ - Used for selection of Netflix shows</a></span></div>
+<div class="ref-item"><span class="ref-num">[2]</span><span><a href="https://www.banronbodo.com/news/articleView.html?idxno=30518" target="_blank" rel="noopener noreferrer">https://www.banronbodo.com/news/articleView.html?idxno=30518 - Used for selection of genres</a></span></div>
+<div class="ref-item"><span class="ref-num">[3]</span><span><a href="https://www.banronbodo.com/news/articleView.html?idxno=30515" target="_blank" rel="noopener noreferrer">https://www.banronbodo.com/news/articleView.html?idxno=30515 - Used for selection of genres</a></span></div>
+<div class="ref-item"><span class="ref-num">[4]</span><span><a href="https://pedia.watcha.com/ko" target="_blank" rel="noopener noreferrer">https://pedia.watcha.com/ko - Used for Korean reviews</a></span></div>
+<div class="ref-item"><span class="ref-num">[5]</span><span><a href="https://www.rottentomatoes.com/" target="_blank" rel="noopener noreferrer">https://www.rottentomatoes.com/ - Used for English reviews</a></span></div>
+<div class="ref-item"><span class="ref-num">[6]</span><span><a href="https://colab.research.google.com/drive/116H4h0TPEySDIFW5DBKDdVyW8DWdSu9W" target="_blank" rel="noopener noreferrer">https://colab.research.google.com/drive/116H4h0TPEySDIFW5DBKDdVyW8DWdSu9W - Code for analysis</a></span></div>
+<div class="ref-item"><span class="ref-num">[7]</span><span><a href="https://theqoo.net/square/2487689967" target="_blank" rel="noopener noreferrer">https://theqoo.net/square/2487689967 - Used for Korean community discussions</a></span></div>
+<div class="ref-item"><span class="ref-num">[8]</span><span><a href="https://gall.dcinside.com/board/view/?id=dcbest&amp;no=414021" target="_blank" rel="noopener noreferrer">https://gall.dcinside.com/board/view/?id=dcbest&amp;no=414021- Used for Korean community discussions</a></span></div>
+<div class="ref-item"><span class="ref-num">[9]</span><span><a href="https://www.fmkorea.com/9667456984" target="_blank" rel="noopener noreferrer">https://www.fmkorea.com/9667456984 - Used for Korean community discussions</a></span></div>
+<div class="ref-item"><span class="ref-num">[10]</span><span><a href="https://docs.google.com/spreadsheets/d/1P93pi1ir2HVLLKURNG_AwNTL0Bfn_ltB-zj2Kj7W5tk/edit" target="_blank" rel="noopener noreferrer">https://docs.google.com/spreadsheets/d/1P93pi1ir2HVLLKURNG_AwNTL0Bfn_ltB-zj2Kj7W5tk/edit - Compiled review analyses</a></span></div>
+<div class="ref-item"><span class="ref-num">[11]</span><span><a href="https://drive.google.com/drive/folders/1IzeLTNBBaDALwh3zGL6ZNJ30jEwQUzxR?usp=drive_link" target="_blank" rel="noopener noreferrer">https://drive.google.com/drive/folders/1IzeLTNBBaDALwh3zGL6ZNJ30jEwQUzxR?usp=drive_link - CSV files containing comments</a></span></div>
 </div>
 </section>
 
